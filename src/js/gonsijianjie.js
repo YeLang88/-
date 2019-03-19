@@ -1,0 +1,29 @@
+//鼠标覆盖关于我们事件
+$(function(){
+	$(".gywm").mouseover(function(){
+		$(".gywm1").removeClass("yc")
+	});
+	$(".gywm").mouseout(function(){
+		$(".gywm1").addClass("yc")
+	});
+})
+$(function(){
+	$(".fuwu").mouseover(function(){
+		$(".ld").removeClass("yc")
+	});
+	$(".fuwu").mouseout(function(){
+		$(".ld").addClass("yc")
+	});
+})
+
+//米约大事件
+$(function(){
+	$(".t2018").click(function(){
+		$(this).addClass("blue").siblings().removeClass("blue");
+		$(".d2018").removeClass("yc").siblings().addClass("yc");
+	})
+	$(".t2019").click(function(){
+		$(this).addClass("blue").siblings().removeClass("blue");
+		$(".d2019").removeClass("yc").siblings().addClass("yc");
+	})
+})

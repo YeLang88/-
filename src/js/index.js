@@ -1,0 +1,26 @@
+//思路：鼠标覆盖上去，改变原div大小；yc1类div显示，鼠标移到另外div时，当前地v添加类名，变大，其它同级删除变大类名，其它yc类的div
+$(function(){
+	$(".d11").mouseenter(function(){
+		$(this).addClass("dd").siblings(".d11").removeClass("dd");
+		$(this).children(".yc1").removeClass("yc");
+		$(this).siblings(".d11").children(".yc1").addClass("yc");
+	})
+})
+  
+//鼠标覆盖关于我们事件
+$(function(){
+	$(".gywm").mouseover(function(){
+		$(".gywm1").removeClass("yc")
+	});
+	$(".gywm").mouseout(function(){
+		$(".gywm1").addClass("yc")
+	});
+})
+$(function(){
+	$(".fuwu").mouseover(function(){
+		$(".ld").removeClass("yc")
+	});
+	$(".fuwu").mouseout(function(){
+		$(".ld").addClass("yc")
+	});
+})
